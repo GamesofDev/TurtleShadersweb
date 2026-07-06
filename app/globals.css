@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00d992;
+  --color-primary-soft: #2fd6a1;
+  --color-primary-deep: #10b981;
+  --color-on-primary: #101010;
+  --color-ink: #f2f2f2;
+  --color-ink-strong: #ffffff;
+  --color-body: #bdbdbd;
+  --color-mute: #8b949e;
+  --color-hairline: #3d3a39;
+  --color-hairline-soft: #b8b3b0;
+  --color-canvas: #101010;
+  --color-canvas-soft: #1a1a1a;
+  --color-canvas-text-soft: #f5f6f7;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(0, 217, 146, 0.2);
+    color: #d1fae5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .card-chrome {
+    background: var(--color-canvas);
+    border: 1px solid var(--color-hairline);
+    border-radius: 8px;
+  }
+
+  .card-chrome-emphasized {
+    background: var(--color-canvas);
+    border: 2px solid var(--color-hairline);
+    border-radius: 8px;
+  }
+
+  .code-block {
+    background: var(--color-canvas);
+    border: 1px solid var(--color-hairline);
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 12px 16px;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-outline {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    border: 1px solid var(--color-hairline);
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 12px 16px;
+    transition: border-color 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--color-ink);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-primary-soft);
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 12px 16px;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    color: var(--color-body);
+  }
+
+  .eyebrow-primary {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  .display-xl {
+    font-family: var(--font-sans);
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -0.65px;
+    color: var(--color-ink-strong);
+  }
+
+  .display-lg {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    color: var(--color-ink);
+  }
+
+  .display-md {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: var(--color-ink);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .dash-divider {
+    border: none;
+    border-top: 1px dashed rgba(79, 93, 117, 0.4);
+    margin: 0;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "designs": {
+    "Voltagent Inspired": {
+      "source": "voltagent/voltagent",
+      "sourcePath": "DESIGN.md",
+      "outputPath": "C:\\Users\\GamesofDev\\Desktop\\TurtleWeb\\turtleshaders-website\\DESIGN.md",
+      "ref": "HEAD",
+      "commitSha": "9a241f017f562ba8800a89aa67010f49f7a008f7",
+      "contentHash": "f10b1ab24c688362d3455b2ebfdc712f2493a0ced83f9ff969c062a010ac1cd9",
+      "fetchedAt": "2026-07-05T11:14:26.054Z"
+    }
+  }
+}
